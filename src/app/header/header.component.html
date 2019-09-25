@@ -1,0 +1,10 @@
+<div class="container-fluid header">
+    <div class="row">
+        <nav class="d-flex justify-content-between nav-background">
+            <img src="../../assets/images/front-test-logo.svg" alt="FrontEnd Test logo">
+            <ng-container *ngIf="loggedIn">
+                <button class="btn btn-only-border" type="button" (click)="logout()">Logout</button>
+            </ng-container>
+        </nav>
+    </div>
+</div>

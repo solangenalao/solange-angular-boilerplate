@@ -1,0 +1,16 @@
+//custom
+@import '../../sass/_variables';
+@import '../../sass/_mixins';
+
+.subtitle {
+    font-family: $mukta;
+    font-weight: bold;
+    font-size: $title-h2;
+    color: $title-h2-color;
+    font-size: $title-h2;
+}
+
+.main-section {
+    background: url(../../assets/images/bg-front.svg) no-repeat top -100px center;
+    background-size: 100%;
+}

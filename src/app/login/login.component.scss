@@ -1,0 +1,29 @@
+//custom
+@import '../../sass/_variables';
+@import '../../sass/_mixins';
+
+.main-title{
+    font-family: $open-sans;
+    font-weight: bold;
+    font-size: $title-h1;
+}
+
+.btn-login{
+    border-radius: 36px;
+    background: $btn-background;
+    color: $btn-color;
+    width: 100%;
+    font-family: $mukta;
+    font-size: $btn-font-size;
+    font-weight: $btn-weight;
+    padding: 18px;
+    margin: 10px 0;
+}
+
+.background-footer {
+    position: absolute;
+    bottom: 0;
+    height: 84px;
+    width: 100%;
+    background: url(../../assets/images/bg-front.svg) no-repeat top center;
+  }

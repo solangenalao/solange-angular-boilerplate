@@ -1,0 +1,16 @@
+//custom
+@import '../../sass/_variables';
+@import '../../sass/_mixins';
+
+.btn-only-border {
+    border-radius: 36px;
+    border: $btn-only-border;
+    background: $btn-only-background;
+    color: $btn-only-color;
+    width: 100%;
+    font-family: $mukta;
+    font-size: $btn-font-size;
+    font-weight: $btn-weight;
+    padding: 18px;
+    margin: 10px 0;
+}

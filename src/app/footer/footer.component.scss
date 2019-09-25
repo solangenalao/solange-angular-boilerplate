@@ -1,0 +1,13 @@
+//custom
+@import '../../sass/_variables';
+@import '../../sass/_mixins';
+
+footer {
+    position: absolute;
+    bottom: 0;
+    height: 84px;
+    width: 100%;
+}
+.background-footer {
+    background: url(../../assets/images/bg-front.svg) no-repeat top center;
+  }
