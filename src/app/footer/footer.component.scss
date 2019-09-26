@@ -4,10 +4,17 @@
 
 footer {
     position: absolute;
+    left: 0;
     bottom: 0;
     height: 84px;
     width: 100%;
+    margin-top: 30px;
 }
-.background-footer {
+
+.footer-login {
     background: url(../../assets/images/bg-front.svg) no-repeat top center;
-  }
+}
+
+.footer-logout {
+    background: url(../../assets/images/bg-front.svg) no-repeat top center;
+}

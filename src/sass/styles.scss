@@ -44,8 +44,9 @@ html, body { height: 100%; }
 body {
     font-family: $mukta;
     font-weight: normal;
-    color:$body-text-color;
+    color: $body-text-color;
     min-height: 100vh;
+    height: auto;
     position: relative;
     margin: 0;
   }

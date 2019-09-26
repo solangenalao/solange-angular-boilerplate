@@ -2,15 +2,15 @@
 @import '../../sass/_variables';
 @import '../../sass/_mixins';
 
+
 .btn-only-border {
     border-radius: 36px;
-    border: $btn-only-border;
-    background: $btn-only-background;
+    border: 1px solid $btn-only-border;
     color: $btn-only-color;
     width: 100%;
     font-family: $mukta;
     font-size: $btn-font-size;
     font-weight: $btn-weight;
-    padding: 18px;
+    padding: 12px;
     margin: 10px 0;
 }

@@ -1,3 +1,25 @@
 //custom
 @import '../../sass/_variables';
 @import '../../sass/_mixins';
+
+.main-title{
+    font-family: $open-sans;
+    font-weight: bold;
+    font-size: $title-h1;
+}
+.main-subtitle {
+    font-family: $mukta;
+    font-weight: bold;
+    font-size: $title-h3;
+}
+.btn-signup{
+    border-radius: 36px;
+    background: $btn-background;
+    color: $btn-color;
+    width: 100%;
+    font-family: $mukta;
+    font-size: $btn-font-size;
+    font-weight: $btn-weight;
+    padding: 18px;
+    margin: 10px 0;
+}

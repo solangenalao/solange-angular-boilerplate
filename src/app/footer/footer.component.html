@@ -1,5 +1,7 @@
-<div class="conatiner-fluid">
-    <div class="row align-items-center">
-        <footer class="background-footer"></footer>
+<footer>
+    <div *ngIf="loggedIn" class="footer-login">
+
     </div>
-</div>
+    <div *ngIf="!loggedIn"class="footer-logout"></div>
+</footer>
+
