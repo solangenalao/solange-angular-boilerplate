@@ -1,6 +1,6 @@
-<section class="row align-items-center justify-content-center h-100">
-    <div class="col-12 col-sm-6 col-md-6">
-      <article class="d-flex flex-column align-content-center justify-content-center">
+<section class="container align-items-center">
+  <div class="row login align-items-center justify-content-center p-3">
+    <div class="col-12 col-sm-6 col-md-6 col-lg-4">
         <h1 class="main-title">Entrar</h1>
         <form class="">
           <div class="form-row">
@@ -16,9 +16,11 @@
                   <small id="emailHelp" class="form-text text-muted text-right">ESQUECEU A SENHA?</small></a>
               </div>
           </div>
-          <button type="submit" class="btn btn-login">Entrar</button>
+          <button type="submit" class="btn btn-login" (click)="login()">Entrar</button>
         </form>
-        <a [routerLink]="['/signup']" class="text-center text-decoration-none">Não tem uma conta? Cadastre-se</a>
-      </article>
+        <div class="text-center">
+          <a routerLink="/signup" class="text-decoration-none">Não tem uma conta? Cadastre-se</a>
+        </div>
     </div>
+  </div>
 </section>

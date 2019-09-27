@@ -2,6 +2,10 @@
 @import '../../sass/_variables';
 @import '../../sass/_mixins';
 
+.login {
+    height: 85vh;
+}
+
 .main-title{
     font-family: $open-sans;
     font-weight: bold;

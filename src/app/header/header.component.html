@@ -1,7 +1,8 @@
-<nav class="navbar fixed-top">
-    <a class="navbar-brand" [routerLink]="['/home']" ><img src="../../assets/images/front-test-logo.svg" alt="FrontEnd Test logo"></a>        
-    <ng-container *ngIf="loggedIn">
-        <button class="btn btn-only-border" type="button" (click)="logout()">Logout</button>
-    </ng-container>
+<nav *ngIf="!identitySvc.loggedIn" class="navbar fixed-top">
+        <a class="navbar-brand"><img src="../../assets/images/front-test-logo.svg" alt="FrontEnd Test logo"></a>
+</nav>
+<nav *ngIf="identitySvc.loggedIn" class="navbar fixed-top">
+    <a class="navbar-brand" routerLink="/" ><img src="../../assets/images/front-test-logo.svg" alt="FrontEnd Test logo"></a>        
+    <button class="col-4 col-lg-2 btn btn-only-border" type="button" (click)="logout()">Logout</button>
 </nav>
 

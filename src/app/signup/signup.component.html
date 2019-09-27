@@ -1,6 +1,6 @@
-<section class="row align-items-center justify-content-center pb-5 mb-5 h-100">
-  <div class="col-12 col-sm-6 col-md-6">
-      <article class="d-flex flex-column align-content-center justify-content-center">
+<section class="container align-items-center h-100">
+    <div class="row signup align-items-center justify-content-center p-3">
+      <div class="col-12 col-sm-6 col-md-6 col-lg-5">
           <h1 class="main-title mb-3">Cadastrar</h1>
           <form class="">
             <div class="form-row">
@@ -46,10 +46,11 @@
                   </div>
               </div>
             </div>
-           <button type="submit" class="btn btn-signup">Cadastrar</button>
+           <button type="submit" class="btn btn-signup" (click)="login()">Cadastrar</button>
           </form>
-          <a [routerLink]="['/login']" class="text-center text-decoration-none">Já tem uma conta? Faça login</a>
-    </article>
-  </div>
+          <div class="text-center">
+            <a routerLink="/login" class="text-center text-decoration-none">Já tem uma conta? Faça login</a>
+          </div>
+      </div>
+    </div>
 </section>
-

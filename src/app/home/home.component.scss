@@ -11,10 +11,16 @@
 }
 
 .main-section {
-    margin-top: -16px;
+    margin-top: 0;
     background: url(../../assets/images/bg-front.svg) no-repeat top -100px center;
     background-size: contain;
+    height: 960px;
 }
+.all-cards {
+    margin-top: -70px;
+    margin-bottom:380px;
+}
+
 .front-test {
     width: 100%;
 }

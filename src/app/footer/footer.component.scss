@@ -2,25 +2,47 @@
 @import '../../sass/_variables';
 @import '../../sass/_mixins';
 
-
-
 footer {
     position: absolute;
-    left: 0;
-    height: 150px;
     width: 100%;
 }
 .login {
-    bottom: 0px;
-    background: url(../../assets/images/bg-front.svg) no-repeat top -5px right -379px;
+    bottom: -506px;
+    height: 375px;
+    background: url(../../assets/images/bg-front.svg) no-repeat top 87px right -547px;
+    background-size: 100%;
 }
-
 
 .logout {
     bottom: 0px;
-    background: url(../../assets/images/bg-front.svg) no-repeat top 565px center;
+    height: 80px;
+    background: url(../../assets/images/bg-front.svg) no-repeat top center; 
+    background-size: 100%;
+}
+
+.footer-items{
+    height: 375px;
 }
 
 ul li {
     list-style: none;
 }
+a:link, a:visited, .link-footer:link, .link-footer:visited {
+   color: $body-text-color;
+   text-decoration: none;
+}
+a:hover, .link-footer:hover {
+    color: $a-links-purple;
+    text-decoration: none;
+}
+
+@media (max-width: 767.98px) { 
+    .login {
+        background: url(../../assets/images/bg-front.svg) no-repeat top 276px right -182px;
+        background-size: 230%;
+    }
+    .logout {
+        background: url(../../assets/images/bg-front.svg) no-repeat top 340px center;
+        background-size: 230%;
+    }
+ }

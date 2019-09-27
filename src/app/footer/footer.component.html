@@ -1,17 +1,33 @@
-<footer *ngIf="!loggedIn"class="logout">
-        <div class="d-flex align-items-center flex-column flex-md-row">
-            <ul class="pr-3">
-                <li class="p-2">Quem somos</li>
-                <li class="p-2">Como Funciona</li>
-                <li class="p-2">FAQ's</li>
-                <li class="p-2">Contato</li>
-            </ul>
-            <ul class="pr-3">
-                <li class="p-2">Login</li>
-                <li class="p-2">Cadastro</li>
-                <li class="p-2">Termos de Uso</li>
-                <li class="p-2">Privacidade</li>
-            </ul>
-        </div> 
+<footer *ngIf="!identitySvc.loggedIn" class="logout"></footer>
+<footer *ngIf="identitySvc.loggedIn" class="login">
+  <div class="col-12 col-sm-6 footer-items d-flex align-items-end flex-column flex-md-row p-4 ml-4">
+    <ul class="pr-3">
+      <a class="link-footer" href="#">
+        <li class="p-2">Quem somos</li>
+      </a>
+      <a class="link-footer" href="#">
+        <li class="p-2">Como Funciona</li>
+      </a>
+      <a class="link-footer" href="#">
+        <li class="p-2">FAQ's </li>
+      </a>
+      <a class="link-footer" href="#">
+        <li class="p-2">Contato </li>
+      </a>
+    </ul>
+    <ul class="pr-3">
+      <a class="link-footer" href="#">
+        <li class="p-2">Login </li>
+      </a>
+      <a class="link-footer" href="#">
+        <li class="p-2">Cadastro </li>
+      </a>
+      <a class="link-footer" href="#">
+        <li class="p-2">Termos de Uso </li>
+      </a>
+      <a class="link-footer" href="#">
+        <li class="p-2">Privacidade </li>
+      </a>
+    </ul>
+  </div>
 </footer>
-<footer *ngIf="loggedIn" class="login">

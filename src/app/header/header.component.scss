@@ -2,15 +2,20 @@
 @import '../../sass/_variables';
 @import '../../sass/_mixins';
 
+.navbar {
+    height: 80px;
+}
 
 .btn-only-border {
     border-radius: 36px;
     border: 1px solid $btn-only-border;
+    background: $btn-only-background;
     color: $btn-only-color;
     width: 100%;
     font-family: $mukta;
     font-size: $btn-font-size;
     font-weight: $btn-weight;
     padding: 12px;
-    margin: 10px 0;
+    margin: 10px;
+    width: 100%;
 }
