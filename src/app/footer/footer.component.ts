@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { IdentityService } from '../identity.service';
 
 @Component({
   selector: 'app-footer',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
-  constructor() { }
+  constructor(public identitySvc: IdentityService) { }
 
   ngOnInit() {
+    this.identitySvc.loggedIn = !this.identitySvc.loggedIn;
   }
 
 }

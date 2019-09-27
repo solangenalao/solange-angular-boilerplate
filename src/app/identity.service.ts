@@ -5,6 +5,6 @@ import { Injectable } from '@angular/core';
 })
 export class IdentityService {
   public username: string = null;
-  public loggedIn: boolean;
+  public loggedIn = false;
   constructor() { }
 }
