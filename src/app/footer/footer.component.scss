@@ -2,19 +2,25 @@
 @import '../../sass/_variables';
 @import '../../sass/_mixins';
 
+
+
 footer {
     position: absolute;
     left: 0;
-    bottom: 0;
-    height: 84px;
+    height: 150px;
     width: 100%;
-    margin-top: 30px;
+}
+.login {
+    bottom: 0px;
+    background: url(../../assets/images/bg-front.svg) no-repeat top -5px right -379px;
 }
 
-.footer-login {
-    background: url(../../assets/images/bg-front.svg) no-repeat top right;
+
+.logout {
+    bottom: 0px;
+    background: url(../../assets/images/bg-front.svg) no-repeat top 565px center;
 }
 
-.footer-logout {
-    background: url(../../assets/images/bg-front.svg) no-repeat top center;
+ul li {
+    list-style: none;
 }

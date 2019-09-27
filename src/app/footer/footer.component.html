@@ -1,6 +1,17 @@
-<footer *ngIf="!loggedIn"class="footer-logout">
-    
+<footer *ngIf="!loggedIn"class="logout">
+        <div class="d-flex align-items-center flex-column flex-md-row">
+            <ul class="pr-3">
+                <li class="p-2">Quem somos</li>
+                <li class="p-2">Como Funciona</li>
+                <li class="p-2">FAQ's</li>
+                <li class="p-2">Contato</li>
+            </ul>
+            <ul class="pr-3">
+                <li class="p-2">Login</li>
+                <li class="p-2">Cadastro</li>
+                <li class="p-2">Termos de Uso</li>
+                <li class="p-2">Privacidade</li>
+            </ul>
+        </div> 
 </footer>
-<footer *ngIf="loggedIn" class="footer-login">
-
-</footer>
+<footer *ngIf="loggedIn" class="login">
