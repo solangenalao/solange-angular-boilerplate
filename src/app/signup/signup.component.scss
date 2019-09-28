@@ -4,8 +4,17 @@
 
 
 .signup {
-    height: 85vh;
+    margin-top: 80px;
+    height: auto;
+    min-height: 85vh;
 }
+.eye-show-hide{
+    cursor: pointer;
+    position: absolute;
+    top: 5px;
+    right: 20px;
+}
+
 .main-title{
     font-family: $open-sans;
     font-weight: bold;

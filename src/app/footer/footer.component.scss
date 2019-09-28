@@ -7,21 +7,22 @@ footer {
     width: 100%;
 }
 .login {
-    bottom: -506px;
-    height: 375px;
-    background: url(../../assets/images/bg-front.svg) no-repeat top 87px right -547px;
-    background-size: 100%;
+    min-height: 250px;
+    bottom: -200px;
+    background: url(../../assets/images/bg-front.svg)  no-repeat top -4px left 650px;
+    background-size: 95%;
 }
 
 .logout {
+    min-height: 80px;
     bottom: 0px;
-    height: 80px;
     background: url(../../assets/images/bg-front.svg) no-repeat top center; 
-    background-size: 100%;
+    background-size: 90%;
 }
 
-.footer-items{
-    height: 375px;
+.login .footer-items {
+    position: relative;
+    bottom: 0;
 }
 
 ul li {
@@ -38,11 +39,11 @@ a:hover, .link-footer:hover {
 
 @media (max-width: 767.98px) { 
     .login {
-        background: url(../../assets/images/bg-front.svg) no-repeat top 276px right -182px;
-        background-size: 230%;
+        background: url(../../assets/images/bg-front.svg) no-repeat top 40px right -65px;
+        background-size: cover;
     }
     .logout {
-        background: url(../../assets/images/bg-front.svg) no-repeat top 340px center;
-        background-size: 230%;
+        background: url(../../assets/images/bg-front.svg) no-repeat top 45px center;
+        background-size: 180%;
     }
  }

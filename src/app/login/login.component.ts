@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { IdentityService } from '../identity.service';
+import { IdentityService } from '../_services/identity.service';
 import { Router } from '@angular/router';
+import { LoginData } from '../_models/loginData';
+
 
 @Component({
   selector: 'app-login',
@@ -8,7 +10,15 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-  public model: {};
+
+  public loginData: LoginData = {
+    email: null,
+    password: null
+  };
+  public type = 'password';
+  public show = false;
+  public submitted = false;
+
   constructor(public identitySvc: IdentityService,
               private router: Router) { }
 
@@ -27,6 +37,15 @@ export class LoginComponent implements OnInit {
   }
 
   resetForm() {
-    this.model = {};
+    this.loginData = {
+      email: '',
+      password: ''
+    };
   }
+
+  toggleShowPassword() {
+    this.show = !this.show;
+    this.show ? this.type = 'text' : this.type = 'password';
+  }
+
 }

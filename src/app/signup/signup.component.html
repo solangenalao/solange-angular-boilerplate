@@ -1,52 +1,98 @@
 <section class="container align-items-center h-100">
     <div class="row signup align-items-center justify-content-center p-3">
-      <div class="col-12 col-sm-6 col-md-6 col-lg-5">
+      <div class="col-12 col-sm-8 col-lg-6">
           <h1 class="main-title mb-3">Cadastrar</h1>
-          <form class="">
+          <form #signupForm="ngForm" (onSubmit)="onSubmit(signupForm)">
             <div class="form-row">
               <div class="col-12 col-sm-6">
                   <h3 class="main-subtitle">Informações Pessoais</h3>
                   <div class="form-group">
-                      <input type="nameOrCompany" class="form-control" id="inputNameOrCompany" aria-describedby="nameOrCompanyHelp"
-                        placeholder="Nome/Razão Social"> 
-                  </div>
-                  <div class="form-group">
-                      <input type="CPF" class="form-control" id="inputCPF" aria-describedby="CPFHelp"
-                        placeholder="CPF">
-                  </div>
-                  <div class="form-group">
-                      <input type="phone" class="form-control" id="inputPhone" aria-describedby="PhoneHelp"
-                        placeholder="Telefone">
-                  </div>
-                  <div class="form-group">
-                      <input type="email" class="form-control" id="InputEmail" aria-describedby="emailHelp"
-                        placeholder="E-mail">
-                  </div>
-                  <div class="form-group">
-                      <input type="password" class="form-control" id="InputPassword" placeholder="Senha" pw-show-hide>
+                    <input type="text" [(ngModel)]="signupData.nameOrCompany" class="form-control" placeholder="Nome/Razão Social" 
+                    value="" name="nameOrCompany" required #nameOrCompany="ngModel" >
+                    <div [hidden]="nameOrCompany.valid || nameOrCompany.untouched" class="alert alert-danger">
+                      Insira seu nome ou Razão Social
                     </div>
+                  </div>
+                  <div class="form-group">
+                      <input type="number" class="form-control" [(ngModel)]="signupData.inputCPF" placeholder="CPF"
+                      value="" name="inputCPF" required #inputCPF="ngModel" >
+                      <div [hidden]="inputCPF.valid || inputCPF.untouched"
+                      class="alert alert-danger">
+                        Insira seu CPF
+                      </div>
+                  </div>
+                  <div class="form-group">
+                      <input type="number" class="form-control" [(ngModel)]="signupData.phoneNumber" placeholder="Telefone"
+                      value="" name="phoneNumber" required #phoneNumber="ngModel" >
+                      <div [hidden]="phoneNumber.valid || phoneNumber.untouched"
+                      class="alert alert-danger">
+                        Insira seu Telefone
+                      </div>
+                  </div>
+                  <div class="form-group">
+                      <input type="email" class="form-control" [(ngModel)]="signupData.inputEmail" placeholder="E-mail"
+                      value="" name="inputEmail" required #inputEmail="ngModel" >
+                      <div [hidden]="inputEmail.valid || inputEmail.untouched"
+                      class="alert alert-danger">
+                        Insira seu e-mail
+                      </div>
+                  </div>
+                  <div class="form-row">
+                      <div class="form-group col">
+                        <input type="{{type}}" [(ngModel)]="signupData.inputPassword" class="form-control" placeholder="Senha"
+                        value="" name="inputPassword" required #inputPassword="ngModel" >
+                        <div [hidden]="inputPassword.valid || inputPassword.untouched"
+                        class="alert alert-danger">
+                          Defina uma Senha
+                        </div>
+                        <span *ngIf="!show" (click)="toggleShowPassword()" class="eye-show-hide"><img src="../../assets/images/eye-open.svg" width="15" alt="mostrar senha"></span>
+                        <span *ngIf="show"  (click)="toggleShowPassword()" class="eye-show-hide"><img src="../../assets/images/eye-close.svg" width="15" alt="ocultar senha"></span>
+                      </div>
+                  </div>
               </div>
               <div class="col-12 col-sm-6">
                   <h3 class="main-subtitle">Endereço</h3>
-                  <div class="form-group">
-                      <input type="CEP" class="form-control" id="inputCEP" aria-describedby="CEPHelp"
-                        placeholder="CEP"> 
-                  </div>
-                  <div class="form-group">
-                      <input type="street" class="form-control" id="inputstreet" aria-describedby="streetHelp"
-                        placeholder="Logradouro"> 
-                  </div>
-                  <div class="form-group">
-                      <input type="number" class="form-control" id="inputNumber" aria-describedby="numberHelp"
-                        placeholder="Número"> 
-                  </div>
-                  <div class="form-group">
-                      <input type="neiborhood" class="form-control" id="inputNeiborhood" aria-describedby="neiborhoodHelp"
-                        placeholder="Bairro"> 
+                  <div class="form-row">
+                      <div class="form-group col-5">
+                        <input type="number" class="form-control" [(ngModel)]="signupData.inputCEP" placeholder="CEP"
+                        value="" name="inputCEP" required #inputCEP="ngModel">
+                        <div [hidden]="inputCEP.valid || inputCEP.untouched"
+                        class="alert alert-danger">
+                          Insira seu CEP
+                      </div>
+                      </div>
+                      <div class="form-group col-7">
+                          <input type="text" class="form-control" [(ngModel)]="signupData.logradouro" placeholder="Logradouro"
+                          value="" name="logradouro" required #logradouro="ngModel"> 
+                          <div [hidden]="logradouro.valid || logradouro.untouched"
+                          class="alert alert-danger">
+                            Insira o nome da sua rua
+                          </div>
+                      </div>
+                    </div>
+                    <div class="form-row">
+                      <div class="form-group col-5">
+                        <input type="number" class="form-control" [(ngModel)]="signupData.inputNumber" placeholder="Número"
+                        value="" name="inputNumber" required #inputNumber="ngModel">
+                        <div [hidden]="inputNumber.valid || inputNumber.untouched"
+                        class="alert alert-danger">
+                          Insira o número da sua residência
+                        </div>
+                    </div>
+                    <div class="form-group col-7">
+                        <input type="text" class="form-control" [(ngModel)]="signupData.bairro" placeholder="Bairro"
+                        value="" name="bairro" required #bairro="ngModel">
+                        <div [hidden]="bairro.valid || bairro.untouched"
+                        class="alert alert-danger">
+                          Insira o seu bairro
+                        </div>
+                    </div>
                   </div>
               </div>
             </div>
-           <button type="submit" class="btn btn-signup" (click)="login()">Cadastrar</button>
+            <div class="text-center">
+              <button type="submit" class="col-12 col-sm-6 btn btn-signup" (click)="login()">Cadastrar</button>
+            </div>
           </form>
           <div class="text-center">
             <a routerLink="/login" class="text-center text-decoration-none">Já tem uma conta? Faça login</a>

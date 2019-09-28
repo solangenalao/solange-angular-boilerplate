@@ -1,26 +1,40 @@
 <section class="container align-items-center">
   <div class="row login align-items-center justify-content-center p-3">
     <div class="col-12 col-sm-6 col-md-6 col-lg-4">
-        <h1 class="main-title">Entrar</h1>
-        <form class="">
-          <div class="form-row">
-              <div class="form-group col">
-                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                    placeholder="E-mail">
-              </div>
+      <h1 class="main-title">Entrar</h1>
+      <form #loginForm="ngForm" (onSubmit)="onSubmit(loginForm.value)">
+        <div class="form-row">
+          <div class="form-group col">
+            <input type="email" id="email" class="form-control" value="" name="email" [(ngModel)]="loginData.email" 
+            placeholder="E-mail" required #emailField="ngModel">
+            <div [hidden]="emailField.valid || emailField.untouched"
+              class="alert alert-danger">
+                Insira seu email
+            </div>
           </div>
-          <div class="form-row">
-              <div class="form-group col">
-                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha">
-                <a class="text-right text-decoration-none font-weight-bold">
-                  <small id="emailHelp" class="form-text text-muted text-right">ESQUECEU A SENHA?</small></a>
-              </div>
-          </div>
-          <button type="submit" class="btn btn-login" (click)="login()">Entrar</button>
-        </form>
-        <div class="text-center">
-          <a routerLink="/signup" class="text-decoration-none">Não tem uma conta? Cadastre-se</a>
         </div>
+
+        <div class="form-row">
+            <div class="form-group col">
+              <input type="{{type}}" value="" id="password" name="password" [(ngModel)]="loginData.password" 
+              class="form-control" placeholder="Senha" required #passwordField="ngModel">
+              <div [hidden]="passwordField.valid || passwordField.untouched"
+              class="alert alert-danger">
+                Insira sua senha
+              </div>
+              <span *ngIf="!show" (click)="toggleShowPassword()" class="eye-show-hide"><img src="../../assets/images/eye-open.svg" width="15" alt="mostrar senha"></span>
+              <span *ngIf="show"  (click)="toggleShowPassword()" class="eye-show-hide"><img src="../../assets/images/eye-close.svg" width="15" alt="ocultar senha"></span>
+              <a class="text-right text-decoration-none font-weight-bold">
+                  <small id="emailHelp" class="form-text text-muted text-right">ESQUECEU A SENHA?</small></a>
+            </div>
+  
+        </div>
+        <button type="submit" class="btn btn-login" (click)="login()">Entrar</button>
+      </form>
+      <div class="text-center">
+        <a routerLink="/signup" class="text-decoration-none">Não tem uma conta? Cadastre-se</a>
+      </div>
     </div>
   </div>
 </section>
+

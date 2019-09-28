@@ -3,7 +3,15 @@
 @import '../../sass/_mixins';
 
 .login {
-    height: 85vh;
+    height: auto;
+    min-height: 85vh;
+}
+
+.eye-show-hide{
+    cursor: pointer;
+    position: absolute;
+    top: 5px;
+    right: 20px;
 }
 
 .main-title{

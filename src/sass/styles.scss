@@ -39,11 +39,13 @@ $solange-test-front-theme: mat-light-theme($solange-test-front-primary, $solange
 @import '../sass/variables';
 @import '../sass/mixins';/* You can add global styles to this file, and also import other style files */
 
-html, body {
+html, body {height:100%;}
+
+
+body {
     font-family: $mukta;
     font-weight: normal;
     color: $body-text-color;
-    height: auto;
     min-height: 100vh;
     position: relative;
     margin: 0;

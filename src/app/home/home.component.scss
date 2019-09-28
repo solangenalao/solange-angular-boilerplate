@@ -2,6 +2,12 @@
 @import '../../sass/_variables';
 @import '../../sass/_mixins';
 
+.main-section {
+    background: url(../../assets/images/bg-front.svg) no-repeat top -150px center;
+    background-size: 80%;
+    width: 100%;
+}
+
 .subtitle {
     font-family: $mukta;
     font-weight: bold;
@@ -10,22 +16,16 @@
     font-size: $title-h2;
 }
 
-.main-section {
-    margin-top: 0;
-    background: url(../../assets/images/bg-front.svg) no-repeat top -100px center;
-    background-size: contain;
-    height: 960px;
-}
 .all-cards {
-    margin-top: -70px;
-    margin-bottom:380px;
+    min-height: 40vh;
 }
 
 .front-test {
     width: 100%;
 }
-.headline {
-    height: 100vh;
+
+.headline{
+    min-height: 40vh;
 }
 
 .btn-only-border {
@@ -47,7 +47,18 @@
     -moz-box-shadow: 0px 0px 6px -3px rgba(74,72,74,1);
     box-shadow: 0px 0px 6px -3px rgba(74,72,74,1);
     border-radius: 8px;
-    background: $card-background;
+}
+.card-one{
+    background: url(../../assets/images/bg-front.svg) no-repeat top 365px left 240px $card-background;
+    background-size: cover;
+}
+.card-two{
+    background: url(../../assets/images/bg-front.svg) no-repeat top 400px center $card-background;
+    background-size: cover; 
+}
+.card-three{
+    background: url(../../assets/images/bg-front.svg) no-repeat top 365px right 240px $card-background;
+    background-size: cover;
 }
 .card-title{
     font-family: $mukta;
@@ -79,14 +90,7 @@
     padding: 12px;
     margin: 10px 0;
 }
-.card-bottom-left{
-    position: relative;
-    bottom: -16px;
-    height: 30px;
-    width: 100%;
-    background: url(../../assets/images/bg-front.svg) no-repeat top center;
-    background-size: cover;
-}
+
 .card-bottom-middle{
     position: relative;
     bottom: -16px;
@@ -106,6 +110,5 @@
 @media (max-width: 767.98px) { 
     .main-section {
         background: url(../../assets/images/bg-front.svg) no-repeat top -40px center;
-        background-size: 230%;
     }
  }

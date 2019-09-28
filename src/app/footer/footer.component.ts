@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { IdentityService } from '../identity.service';
+import { IdentityService } from '../_services/identity.service';
 
 @Component({
   selector: 'app-footer',

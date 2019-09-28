@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { IdentityService } from '../identity.service';
+import { IdentityService } from '../_services/identity.service';
 import { Router } from '@angular/router';
+import { Validators, NgForm } from '@angular/forms';
+import { SignupData } from '../_models/signupData';
 
 @Component({
   selector: 'app-signup',
@@ -8,7 +10,23 @@ import { Router } from '@angular/router';
   styleUrls: ['./signup.component.scss']
 })
 export class SignupComponent implements OnInit {
-  public model: {};
+
+  public signupData: SignupData = {
+    nameOrCompany: null,
+    inputCPF: null,
+    phoneNumber: null,
+    inputEmail: null,
+    inputPassword: null,
+    inputCEP: null,
+    logradouro: null,
+    inputNumber: null,
+    bairro: null,
+  };
+  public type = 'password';
+  public show = false;
+
+  public submitted = false;
+
   constructor(public identitySvc: IdentityService,
               private router: Router) { }
 
@@ -27,6 +45,21 @@ export class SignupComponent implements OnInit {
   }
 
   resetForm() {
-    this.model = {};
+    this.signupData = {
+      nameOrCompany: '',
+      inputCPF: '',
+      phoneNumber: '',
+      inputEmail: '',
+      inputPassword: '',
+      inputCEP: '',
+      logradouro: '',
+      inputNumber: '',
+      bairro: '',
+    };
+  }
+
+  toggleShowPassword() {
+    this.show = !this.show;
+    this.show ? this.type = 'text' : this.type = 'password';
   }
 }
