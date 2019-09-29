@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { IdentityService } from '../_services/identity.service';
 import { Router } from '@angular/router';
-import { Validators, NgForm } from '@angular/forms';
 import { SignupData } from '../_models/signupData';
+
 
 @Component({
   selector: 'app-signup',
@@ -26,6 +26,7 @@ export class SignupComponent implements OnInit {
   public show = false;
 
   public submitted = false;
+
 
   constructor(public identitySvc: IdentityService,
               private router: Router) { }
@@ -62,4 +63,5 @@ export class SignupComponent implements OnInit {
     this.show = !this.show;
     this.show ? this.type = 'text' : this.type = 'password';
   }
+
 }
